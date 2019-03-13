@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		257523272235525300041BF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257523262235525300041BF7 /* AppDelegate.swift */; };
-		257523292235525300041BF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257523282235525300041BF7 /* ViewController.swift */; };
+		257523292235525300041BF7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257523282235525300041BF7 /* LoginViewController.swift */; };
 		2575232C2235525300041BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2575232A2235525300041BF7 /* Main.storyboard */; };
 		2575232E2235525300041BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2575232D2235525300041BF7 /* Assets.xcassets */; };
 		257523312235525300041BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2575232F2235525300041BF7 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		257523232235525200041BF7 /* iOS Chat App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Chat App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		257523262235525300041BF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		257523282235525300041BF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		257523282235525300041BF7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2575232B2235525300041BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2575232D2235525300041BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		257523302235525300041BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,14 +64,38 @@
 			isa = PBXGroup;
 			children = (
 				257523262235525300041BF7 /* AppDelegate.swift */,
-				257523282235525300041BF7 /* ViewController.swift */,
+				25D15704223925EC008341BE /* Controllers */,
+				25D15703223925E2008341BE /* Views */,
+				25D15705223925FF008341BE /* Supporting Files */,
+			);
+			path = "iOS Chat App";
+			sourceTree = "<group>";
+		};
+		25D15703223925E2008341BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				2575232A2235525300041BF7 /* Main.storyboard */,
-				2575232D2235525300041BF7 /* Assets.xcassets */,
 				2575232F2235525300041BF7 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		25D15704223925EC008341BE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				257523282235525300041BF7 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		25D15705223925FF008341BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2575232D2235525300041BF7 /* Assets.xcassets */,
 				257523322235525300041BF7 /* Info.plist */,
 				2575233C2235564F00041BF7 /* GoogleService-Info.plist */,
 			);
-			path = "iOS Chat App";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		64E4D6BE43F4A962AC7D919B /* Frameworks */ = {
@@ -88,7 +112,6 @@
 				E53C7793A9DF217F06DE063C /* Pods-iOS Chat App.debug.xcconfig */,
 				539B8A27E8F2796E5AAEE2F2 /* Pods-iOS Chat App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -217,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257523292235525300041BF7 /* ViewController.swift in Sources */,
+				257523292235525300041BF7 /* LoginViewController.swift in Sources */,
 				257523272235525300041BF7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
