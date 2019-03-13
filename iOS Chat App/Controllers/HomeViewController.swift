@@ -14,4 +14,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToLoginView", sender: self)
+    }
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToRegisterView", sender: self)
+    }
 }
