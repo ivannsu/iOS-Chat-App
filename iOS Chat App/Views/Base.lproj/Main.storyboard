@@ -51,6 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137" y="-358"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="PYB-rr-hco">
@@ -93,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="377-Js-fCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="27"/>
+            <point key="canvasLocation" x="137" y="358"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="SmO-9S-jNS">
@@ -124,10 +125,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Xu8-dI-Bwh"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToLoginView" id="hoD-fQ-7Cs"/>
+                        <segue destination="KiH-Ra-y3o" kind="show" identifier="goToRegisterView" id="rHx-Gz-8xS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EgV-bo-PUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-628" y="27"/>
+            <point key="canvasLocation" x="-650" y="27"/>
         </scene>
     </scenes>
 </document>
