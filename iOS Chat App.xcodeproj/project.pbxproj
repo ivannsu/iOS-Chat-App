@@ -13,6 +13,7 @@
 		2575232E2235525300041BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2575232D2235525300041BF7 /* Assets.xcassets */; };
 		257523312235525300041BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2575232F2235525300041BF7 /* LaunchScreen.storyboard */; };
 		2575233D2235564F00041BF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2575233C2235564F00041BF7 /* GoogleService-Info.plist */; };
+		25D1570722392834008341BE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1570622392834008341BE /* RegisterViewController.swift */; };
 		745C8950E8A09C80D34DA7B3 /* Pods_iOS_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AFC366EE0AD8DFA736F5B0 /* Pods_iOS_Chat_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		257523302235525300041BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		257523322235525300041BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2575233C2235564F00041BF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		25D1570622392834008341BE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		38AFC366EE0AD8DFA736F5B0 /* Pods_iOS_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		539B8A27E8F2796E5AAEE2F2 /* Pods-iOS Chat App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Chat App.release.xcconfig"; path = "Target Support Files/Pods-iOS Chat App/Pods-iOS Chat App.release.xcconfig"; sourceTree = "<group>"; };
 		E53C7793A9DF217F06DE063C /* Pods-iOS Chat App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Chat App.debug.xcconfig"; path = "Target Support Files/Pods-iOS Chat App/Pods-iOS Chat App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 				25D15704223925EC008341BE /* Controllers */,
 				25D15703223925E2008341BE /* Views */,
 				25D15705223925FF008341BE /* Supporting Files */,
+				257523322235525300041BF7 /* Info.plist */,
+				2575233C2235564F00041BF7 /* GoogleService-Info.plist */,
 			);
 			path = "iOS Chat App";
 			sourceTree = "<group>";
@@ -84,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				257523282235525300041BF7 /* LoginViewController.swift */,
+				25D1570622392834008341BE /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -92,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				2575232D2235525300041BF7 /* Assets.xcassets */,
-				257523322235525300041BF7 /* Info.plist */,
-				2575233C2235564F00041BF7 /* GoogleService-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25D1570722392834008341BE /* RegisterViewController.swift in Sources */,
 				257523292235525300041BF7 /* LoginViewController.swift in Sources */,
 				257523272235525300041BF7 /* AppDelegate.swift in Sources */,
 			);
