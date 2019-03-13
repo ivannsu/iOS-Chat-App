@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login-->
+        <!--LOGIN-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="iOS_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,7 +41,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="lXS-4f-iPa">
+                    <navigationItem key="navigationItem" title="LOGIN" id="lXS-4f-iPa">
                         <barButtonItem key="backBarButtonItem" title=" " id="p4g-nv-Bi6"/>
                     </navigationItem>
                 </viewController>
@@ -49,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="1076" y="-358.4707646176912"/>
         </scene>
-        <!--Register-->
+        <!--REGISTER-->
         <scene sceneID="PYB-rr-hco">
             <objects>
                 <viewController id="KiH-Ra-y3o" customClass="RegisterViewController" customModule="iOS_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,7 +80,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9R5-Oh-LB0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Register" id="DBH-J5-6Xu">
+                    <navigationItem key="navigationItem" title="REGISTER" id="DBH-J5-6Xu">
                         <barButtonItem key="backBarButtonItem" title=" " id="fpo-qz-Y7W"/>
                     </navigationItem>
                 </viewController>
@@ -88,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="1076" y="357.57121439280365"/>
         </scene>
-        <!--Home-->
+        <!--HOME-->
         <scene sceneID="SmO-9S-jNS">
             <objects>
                 <viewController id="RbG-Pf-LWM" customClass="HomeViewController" customModule="iOS_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -123,7 +123,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Xu8-dI-Bwh"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="jxM-Fr-LMU">
+                    <navigationItem key="navigationItem" title="HOME" id="jxM-Fr-LMU">
                         <barButtonItem key="backBarButtonItem" title=" " id="xfm-Mu-afp"/>
                     </navigationItem>
                     <connections>
