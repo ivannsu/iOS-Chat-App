@@ -36,6 +36,9 @@
                                 <rect key="frame" x="168" y="223" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xA4-JX-RoM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,6 +48,8 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="p4g-nv-Bi6"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="emailTextField" destination="FNN-dw-gq1" id="YDf-FP-Oxn"/>
+                        <outlet property="passwordTextField" destination="nUT-jd-vW8" id="eRx-tZ-r0n"/>
                         <segue destination="MxE-HJ-Zkt" kind="show" identifier="goToChatViewFromLogin" id="n1k-4w-3Xt"/>
                     </connections>
                 </viewController>
