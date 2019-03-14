@@ -19,6 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         // Using Firebase
         FirebaseApp.configure()
+        
+        // Override Back Button Icon Image
+        /*
+        UINavigationBar.appearance().backIndicatorImage = backIcon
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backIcon
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: 0, vertical: 0), for: .default)
+        */
+        
         return true
     }
 
