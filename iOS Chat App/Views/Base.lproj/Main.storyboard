@@ -140,7 +140,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zDS-OY-hnZ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat" id="plW-oQ-YXV"/>
+                    <navigationItem key="navigationItem" title="Chat" id="plW-oQ-YXV">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="1Od-3L-qK7">
+                            <connections>
+                                <action selector="signOutButtonPressed:" destination="MxE-HJ-Zkt" id="HL6-MY-t0q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLC-fh-Bie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,6 +224,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zgS-hA-6fl"/>
+        <segue reference="n1k-4w-3Xt"/>
     </inferredMetricsTieBreakers>
 </document>

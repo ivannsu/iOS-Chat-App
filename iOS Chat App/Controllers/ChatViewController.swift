@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ChatViewController: UIViewController {
 
@@ -19,6 +20,14 @@ class ChatViewController: UIViewController {
         tableView.delegate = self
     }
 
+    @IBAction func signOutButtonPressed(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch {
+            print("Error Sign Out: \(error)")
+        }
+    }
 }
 
 extension ChatViewController: UITableViewDelegate {
