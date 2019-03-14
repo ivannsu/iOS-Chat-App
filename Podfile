@@ -6,6 +6,7 @@ target 'iOS Chat App' do
 
   # Pods for iOS Chat App
     pod 'Firebase/Core'
+    pod 'Firebase/Auth'
     pod 'SVProgressHUD'
 
 end

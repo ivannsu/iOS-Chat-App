@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class RegisterViewController: UIViewController {
 
@@ -18,7 +19,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToChatView", sender: self)
+        // performSegue(withIdentifier: "goToChatView", sender: self)
     }
     
 }
