@@ -10,14 +10,15 @@ import UIKit
 import FirebaseAuth
 
 class ChatViewController: UIViewController {
-
-    let tableView = UITableView()
+    
+    @IBOutlet weak var messagesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.setHidesBackButton(true, animated: false)
         
-        tableView.delegate = self
+        messagesTableView.delegate = self
+        messagesTableView.dataSource = self
     }
 
     @IBAction func signOutButtonPressed(_ sender: UIBarButtonItem) {
@@ -36,8 +37,8 @@ extension ChatViewController: UITableViewDelegate {
 
 extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath)
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath)
+        // let cell = UITableViewCell(style: .default, reuseIdentifier: "chatCell")
         
         cell.textLabel?.text = "Hello world"
         
