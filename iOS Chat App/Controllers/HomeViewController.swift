@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
@@ -15,6 +16,15 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        let currentUser = Auth.auth().currentUser
+        
+        if currentUser != nil {
+            if let currentUser = currentUser {
+                print(currentUser.email!)
+                performSegue(withIdentifier: "goToChatView", sender: self)
+            }
+        }
+        
         navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)
     }
