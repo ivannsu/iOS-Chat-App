@@ -10,8 +10,12 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+    }
+    
 }

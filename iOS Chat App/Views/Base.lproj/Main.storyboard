@@ -83,6 +83,9 @@
                                 <rect key="frame" x="159" y="225" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="KiH-Ra-y3o" eventType="touchUpInside" id="jEN-WB-6hq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -92,6 +95,8 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="fpo-qz-Y7W"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="emailTextField" destination="Lem-Tz-RzM" id="tSs-Kw-Otm"/>
+                        <outlet property="passwordTextField" destination="j3W-j3-3jj" id="i0e-wt-uaZ"/>
                         <segue destination="MxE-HJ-Zkt" kind="show" identifier="goToChatViewFromRegister" id="Xbq-2N-mBI"/>
                     </connections>
                 </viewController>
@@ -186,6 +191,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="n1k-4w-3Xt"/>
+        <segue reference="Xbq-2N-mBI"/>
     </inferredMetricsTieBreakers>
 </document>
