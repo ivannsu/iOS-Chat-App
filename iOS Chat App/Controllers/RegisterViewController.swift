@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import SVProgressHUD
 
 class RegisterViewController: UIViewController {
@@ -19,7 +20,25 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        // performSegue(withIdentifier: "goToChatView", sender: self)
+        SVProgressHUD.show()
+        
+        if emailTextField.text != "" && passwordTextField.text != "" {
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) {
+                (authResult, error) in
+                
+                if error != nil {
+                    print("Error register new user: \(error!)")
+                    SVProgressHUD.dismiss()
+                } else {
+                    print("Success register new user...")
+                    
+                    SVProgressHUD.dismiss()
+                    self.performSegue(withIdentifier: "goToChatView", sender: self)
+                }
+            }
+        } else {
+            print("Email or Password is empty!")
+        }
     }
     
 }
