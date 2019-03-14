@@ -44,10 +44,13 @@
                     <navigationItem key="navigationItem" title="LOGIN" id="lXS-4f-iPa">
                         <barButtonItem key="backBarButtonItem" title=" " id="p4g-nv-Bi6"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="MxE-HJ-Zkt" kind="show" identifier="goToChatViewFromLogin" id="n1k-4w-3Xt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="-358.4707646176912"/>
+            <point key="canvasLocation" x="1076" y="-317"/>
         </scene>
         <!--REGISTER-->
         <scene sceneID="PYB-rr-hco">
@@ -83,10 +86,13 @@
                     <navigationItem key="navigationItem" title="REGISTER" id="DBH-J5-6Xu">
                         <barButtonItem key="backBarButtonItem" title=" " id="fpo-qz-Y7W"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="MxE-HJ-Zkt" kind="show" identifier="goToChatViewFromRegister" id="Xbq-2N-mBI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="377-Js-fCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="357.57121439280365"/>
+            <point key="canvasLocation" x="1076" y="415"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="kEy-T1-J4S">
@@ -101,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLC-fh-Bie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1831" y="27"/>
+            <point key="canvasLocation" x="1865" y="27"/>
         </scene>
         <!--HOME-->
         <scene sceneID="SmO-9S-jNS">
@@ -144,6 +150,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToLoginView" id="hoD-fQ-7Cs"/>
                         <segue destination="KiH-Ra-y3o" kind="show" identifier="goToRegisterView" id="rHx-Gz-8xS"/>
+                        <segue destination="MxE-HJ-Zkt" kind="show" identifier="goToChatView" id="zgS-hA-6fl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EgV-bo-PUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -173,4 +180,7 @@
             <point key="canvasLocation" x="-474" y="27"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="n1k-4w-3Xt"/>
+    </inferredMetricsTieBreakers>
 </document>
