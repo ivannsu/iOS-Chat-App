@@ -50,7 +50,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="FNN-dw-gq1" id="YDf-FP-Oxn"/>
                         <outlet property="passwordTextField" destination="nUT-jd-vW8" id="eRx-tZ-r0n"/>
-                        <segue destination="MxE-HJ-Zkt" kind="show" identifier="goToChatViewFromLogin" id="n1k-4w-3Xt"/>
+                        <segue destination="MxE-HJ-Zkt" kind="show" identifier="goToChatView" id="n1k-4w-3Xt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,14 +97,14 @@
                     <connections>
                         <outlet property="emailTextField" destination="Lem-Tz-RzM" id="tSs-Kw-Otm"/>
                         <outlet property="passwordTextField" destination="j3W-j3-3jj" id="i0e-wt-uaZ"/>
-                        <segue destination="MxE-HJ-Zkt" kind="show" identifier="goToChatViewFromRegister" id="Xbq-2N-mBI"/>
+                        <segue destination="MxE-HJ-Zkt" kind="show" identifier="goToChatView" id="Xbq-2N-mBI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="377-Js-fCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="415"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--Chat-->
         <scene sceneID="kEy-T1-J4S">
             <objects>
                 <viewController id="MxE-HJ-Zkt" customClass="ChatViewController" customModule="iOS_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -114,6 +114,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zDS-OY-hnZ"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Chat" id="plW-oQ-YXV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLC-fh-Bie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,7 +156,7 @@
                         <viewLayoutGuide key="safeArea" id="Xu8-dI-Bwh"/>
                     </view>
                     <navigationItem key="navigationItem" title="HOME" id="jxM-Fr-LMU">
-                        <barButtonItem key="backBarButtonItem" title=" " id="2zs-Ii-yeg"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="l8i-FS-KT9"/>
                     </navigationItem>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToLoginView" id="hoD-fQ-7Cs"/>
@@ -191,6 +192,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xbq-2N-mBI"/>
+        <segue reference="zgS-hA-6fl"/>
     </inferredMetricsTieBreakers>
 </document>
