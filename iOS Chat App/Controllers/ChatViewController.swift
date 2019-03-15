@@ -24,7 +24,8 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        seedData()
+        // seedData()
+        retriveData()
         
         navigationItem.setHidesBackButton(true, animated: false)
         
@@ -48,6 +49,23 @@ class ChatViewController: UIViewController {
         messagesData.append(newMessage3)
        
     }
+    
+    func retriveData() {
+        let messageDB = Database.database().reference().child("messages")
+        
+        messageDB.observe(.childAdded) { (snapshot) in
+            let snapshotValue = snapshot.value as! Dictionary<String, String>
+            let email = snapshotValue["email"]
+            let messageBody = snapshotValue["messageBody"]
+            
+            let message = Message(sender: email!, messageBody: messageBody!)
+            
+            self.messagesData.append(message)
+            self.messagesTableView.reloadData()
+            // self.configureTableView()
+        }
+    }
+    
     @IBAction func sendButtonPressed(_ sender: UIButton) {
         if let user = Auth.auth().currentUser {
             let message = [
