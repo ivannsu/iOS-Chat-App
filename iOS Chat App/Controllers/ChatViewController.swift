@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import FirebaseAuth
 
 class ChatViewController: UIViewController {
     
     private var messagesData: [Message] = [Message]()
+    
+    // Firebase Realtime Database
+    private let ref: DatabaseReference = Database.database().reference()
     
     @IBOutlet weak var messagesTableView: UITableView!
     
