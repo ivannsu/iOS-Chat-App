@@ -18,6 +18,8 @@ class ChatViewController: UIViewController {
     private let ref: DatabaseReference = Database.database().reference()
     
     @IBOutlet weak var messagesTableView: UITableView!
+    @IBOutlet weak var messageTextField: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +48,31 @@ class ChatViewController: UIViewController {
         messagesData.append(newMessage3)
        
     }
-
+    @IBAction func sendButtonPressed(_ sender: UIButton) {
+        if let user = Auth.auth().currentUser {
+            let message = [
+                "email": user.email,
+                "messageBody": messageTextField.text!
+            ]
+            
+            messageTextField.isEnabled = false
+            sendButton.isEnabled = false
+            
+            ref.child("messages").childByAutoId().setValue(message) {
+                (error, result) in
+                if let error = error {
+                    print("Error sending message: \(error)")
+                } else {
+                    print("success sending message")
+                }
+                
+                self.messageTextField.isEnabled = true
+                self.messageTextField.text = ""
+                self.sendButton.isEnabled = true
+            }
+        }
+    }
+    
     @IBAction func signOutButtonPressed(_ sender: UIBarButtonItem) {
         do {
             try Auth.auth().signOut()
