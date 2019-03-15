@@ -19,32 +19,52 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEW-pM-yJi">
-                        <rect key="frame" x="8" y="8" width="304" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.99763482810000004" green="0.95258987179999999" blue="0.45333175930000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Body" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWJ-C0-fIZ">
-                        <rect key="frame" x="8" y="29" width="304" height="24"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <color key="textColor" red="0.99991267919540405" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qeu-et-TZB" userLabel="Container">
+                        <rect key="frame" x="4" y="4" width="312" height="55.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEW-pM-yJi">
+                                <rect key="frame" x="8" y="5" width="296" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3J-H7-K31" userLabel="Line">
+                                <rect key="frame" x="8" y="26" width="296" height="2"/>
+                                <color key="backgroundColor" red="0.92595821619999996" green="0.3891458511" blue="0.36467808489999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Body" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWJ-C0-fIZ">
+                                <rect key="frame" x="8" y="28.5" width="296" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28145204741379315" green="0.28145204741379315" blue="0.28145204741379315" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vWJ-C0-fIZ" firstAttribute="leading" secondItem="qeu-et-TZB" secondAttribute="leading" constant="8" id="5gz-39-iMi"/>
+                            <constraint firstItem="mEW-pM-yJi" firstAttribute="leading" secondItem="qeu-et-TZB" secondAttribute="leading" constant="8" id="Cbo-2A-MiN"/>
+                            <constraint firstItem="vWJ-C0-fIZ" firstAttribute="top" secondItem="k3J-H7-K31" secondAttribute="bottom" constant="0.5" id="DWA-4r-hnO"/>
+                            <constraint firstAttribute="trailing" secondItem="k3J-H7-K31" secondAttribute="trailing" constant="8" id="E0F-fQ-CU1"/>
+                            <constraint firstItem="k3J-H7-K31" firstAttribute="leading" secondItem="qeu-et-TZB" secondAttribute="leading" constant="8" id="Ybl-hj-7xz"/>
+                            <constraint firstItem="mEW-pM-yJi" firstAttribute="top" secondItem="qeu-et-TZB" secondAttribute="top" constant="5" id="fZa-ea-kgQ"/>
+                            <constraint firstItem="k3J-H7-K31" firstAttribute="top" secondItem="mEW-pM-yJi" secondAttribute="bottom" constant="0.5" id="gpy-la-bBi"/>
+                            <constraint firstAttribute="bottom" secondItem="vWJ-C0-fIZ" secondAttribute="bottom" constant="3" id="grT-dA-fGL"/>
+                            <constraint firstAttribute="trailing" secondItem="mEW-pM-yJi" secondAttribute="trailing" constant="8" id="pNu-cb-8i0"/>
+                            <constraint firstAttribute="trailing" secondItem="vWJ-C0-fIZ" secondAttribute="trailing" constant="8" id="s6j-jH-Dxf"/>
+                        </constraints>
+                    </view>
                 </subviews>
-                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="vWJ-C0-fIZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="0Ev-N4-Lux"/>
-                    <constraint firstAttribute="bottom" secondItem="vWJ-C0-fIZ" secondAttribute="bottom" constant="10.5" id="2jl-Sq-JMY"/>
-                    <constraint firstItem="mEW-pM-yJi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="QlV-EK-68F"/>
-                    <constraint firstAttribute="trailing" secondItem="vWJ-C0-fIZ" secondAttribute="trailing" constant="8" id="TfT-qQ-mhc"/>
-                    <constraint firstAttribute="trailing" secondItem="mEW-pM-yJi" secondAttribute="trailing" constant="8" id="gS6-Lw-nDS"/>
-                    <constraint firstItem="vWJ-C0-fIZ" firstAttribute="top" secondItem="mEW-pM-yJi" secondAttribute="bottom" constant="0.5" id="hSP-Xa-sL9"/>
-                    <constraint firstItem="mEW-pM-yJi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="ohU-Tw-uSp"/>
+                    <constraint firstAttribute="trailing" secondItem="qeu-et-TZB" secondAttribute="trailing" constant="4" id="94u-b0-ty2"/>
+                    <constraint firstItem="qeu-et-TZB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="BbQ-7c-uRL"/>
+                    <constraint firstAttribute="bottom" secondItem="qeu-et-TZB" secondAttribute="bottom" constant="4" id="Hum-LH-fY7"/>
+                    <constraint firstItem="qeu-et-TZB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="KAK-H3-fQb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="container" destination="qeu-et-TZB" id="y3j-Pf-uA7"/>
+                <outlet property="line" destination="k3J-H7-K31" id="Ftp-GT-yre"/>
                 <outlet property="messageBodyLabel" destination="vWJ-C0-fIZ" id="9V0-gU-ntr"/>
                 <outlet property="senderLabel" destination="mEW-pM-yJi" id="iMo-sg-dC7"/>
             </connections>

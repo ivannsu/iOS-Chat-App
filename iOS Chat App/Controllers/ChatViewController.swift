@@ -57,6 +57,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageCell
         
+        cell.container.layer.cornerRadius = 10
         cell.senderLabel.text = messagesData[indexPath.row].sender
         cell.messageBodyLabel.text = messagesData[indexPath.row].messageBody
         
