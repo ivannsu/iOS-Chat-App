@@ -11,14 +11,36 @@ import FirebaseAuth
 
 class ChatViewController: UIViewController {
     
+    private var messagesData: [Message] = [Message]()
+    
     @IBOutlet weak var messagesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        seedData()
+        
         navigationItem.setHidesBackButton(true, animated: false)
         
         messagesTableView.delegate = self
         messagesTableView.dataSource = self
+        messagesTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "messageCell")
+        
+        messagesTableView.separatorStyle = .none
+        messagesTableView.rowHeight = UITableView.automaticDimension
+        messagesTableView.estimatedRowHeight = 100.0
+    }
+    
+    func seedData() {
+        
+        let newMessage1 = Message(sender: "user1", messageBody: "hello user2")
+        let newMessage2 = Message(sender: "user2", messageBody: "hello user1")
+        let newMessage3 = Message(sender: "user3", messageBody: "hello user1 and user2")
+        
+        messagesData.append(newMessage1)
+        messagesData.append(newMessage2)
+        messagesData.append(newMessage3)
+       
     }
 
     @IBAction func signOutButtonPressed(_ sender: UIBarButtonItem) {
@@ -31,21 +53,17 @@ class ChatViewController: UIViewController {
     }
 }
 
-extension ChatViewController: UITableViewDelegate {
-    
-}
-
-extension ChatViewController: UITableViewDataSource {
+extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath)
-        // let cell = UITableViewCell(style: .default, reuseIdentifier: "chatCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageCell
         
-        cell.textLabel?.text = "Hello world"
+        cell.senderLabel.text = messagesData[indexPath.row].sender
+        cell.messageBodyLabel.text = messagesData[indexPath.row].messageBody
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return messagesData.count
     }
 }
