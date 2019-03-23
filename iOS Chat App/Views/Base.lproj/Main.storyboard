@@ -164,25 +164,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wRC-6K-lAz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wRC-6K-lAz">
                                 <rect key="frame" x="0.0" y="70" width="320" height="455"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1V-eZ-dy5">
-                                <rect key="frame" x="0.0" y="525" width="376" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1V-eZ-dy5">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OA0-Sd-Nbd">
-                                        <rect key="frame" x="8" y="6" width="259" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXG-GR-ai9">
-                                        <rect key="frame" x="275" y="6" width="36" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXG-GR-ai9">
+                                        <rect key="frame" x="275" y="10" width="36" height="30"/>
                                         <state key="normal" title="Send">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -190,11 +180,36 @@
                                             <action selector="sendButtonPressed:" destination="MxE-HJ-Zkt" eventType="touchUpInside" id="5k4-2S-SEc"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OA0-Sd-Nbd">
+                                        <rect key="frame" x="8" y="5" width="259" height="40"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="OA0-Sd-Nbd" firstAttribute="leading" secondItem="I1V-eZ-dy5" secondAttribute="leading" constant="8" id="8RW-Tj-Lcq"/>
+                                    <constraint firstItem="HXG-GR-ai9" firstAttribute="top" secondItem="I1V-eZ-dy5" secondAttribute="top" constant="10" id="FHC-Za-oYg"/>
+                                    <constraint firstItem="HXG-GR-ai9" firstAttribute="leading" secondItem="OA0-Sd-Nbd" secondAttribute="trailing" constant="8" id="HPU-jY-WgU"/>
+                                    <constraint firstItem="OA0-Sd-Nbd" firstAttribute="top" secondItem="I1V-eZ-dy5" secondAttribute="top" constant="5" id="KBK-fa-edT"/>
+                                    <constraint firstAttribute="bottom" secondItem="HXG-GR-ai9" secondAttribute="bottom" constant="10" id="WUw-IU-dfz"/>
+                                    <constraint firstAttribute="height" constant="50" id="np9-AR-iQ6"/>
+                                    <constraint firstAttribute="bottom" secondItem="OA0-Sd-Nbd" secondAttribute="bottom" constant="5" id="uxf-FG-ZRU"/>
+                                    <constraint firstAttribute="trailing" secondItem="HXG-GR-ai9" secondAttribute="trailing" constant="9" id="z3p-Rc-raj"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wRC-6K-lAz" firstAttribute="leading" secondItem="zDS-OY-hnZ" secondAttribute="leading" id="8TH-Ez-E7M"/>
+                            <constraint firstItem="zDS-OY-hnZ" firstAttribute="trailing" secondItem="I1V-eZ-dy5" secondAttribute="trailing" id="DTk-1q-kyh"/>
+                            <constraint firstItem="I1V-eZ-dy5" firstAttribute="top" secondItem="wRC-6K-lAz" secondAttribute="bottom" constant="-7" id="Sto-fd-Hwa"/>
+                            <constraint firstItem="zDS-OY-hnZ" firstAttribute="trailing" secondItem="wRC-6K-lAz" secondAttribute="trailing" id="Wj3-yz-kjw"/>
+                            <constraint firstItem="I1V-eZ-dy5" firstAttribute="leading" secondItem="zDS-OY-hnZ" secondAttribute="leading" id="ZMQ-z0-vcf"/>
+                            <constraint firstItem="wRC-6K-lAz" firstAttribute="top" secondItem="zDS-OY-hnZ" secondAttribute="top" constant="6" id="vvc-cB-GyR"/>
+                            <constraint firstItem="zDS-OY-hnZ" firstAttribute="bottom" secondItem="I1V-eZ-dy5" secondAttribute="bottom" id="zTQ-SU-cfE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zDS-OY-hnZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="plW-oQ-YXV">
